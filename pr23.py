@@ -14,7 +14,6 @@ def n_of_proper_divisors(n):
 
     return int(res)
 
-
 abundants = []
 
 for i in range(2, 28123):
