@@ -31,7 +31,6 @@ for i in range(1, len(arr_)):
         for j in range(len(arr_)):
             old_value = arr_[j][i]
             if j == 0:
-
                 arr_[j][i] = min(arr_[j][i - 1], arr_[j + 1][i]) + arr[j][i]
             elif j == len(arr_) - 1:
                 arr_[j][i] = min(arr_[j][i - 1], arr_[j - 1][i]) + arr[j][i]
@@ -49,26 +48,19 @@ while i > 0:
     if j == 0:
         if arr_[j][i - 1] < arr_[j + 1][i]:
             i -= 1
-            result += arr[j][i]
         else:
             j += 1
-            result += arr[j][i]
-
     elif j == len(arr_) - 1:
         if arr_[j][i - 1] < arr_[j - 1][i]:
             i -= 1
-            result += arr[j][i]
         else:
             j -= 1
-            result += arr[j][i]
     elif arr_[j][i - 1] < arr_[j + 1][i] and arr_[j][i - 1] < arr_[j - 1][i]:
         i -= 1
-        result += arr[j][i]
     elif arr_[j + 1][i] < arr_[j][i - 1] and arr_[j + 1][i] < arr_[j - 1][i]:
         j += 1
-        result += arr[j][i]
     else:
         j -= 1
-        result += arr[j][i]
+    result += arr[j][i]
 
 print(result)
