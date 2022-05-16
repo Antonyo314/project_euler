@@ -1,5 +1,4 @@
 import copy
-from pprint import pprint
 import numpy as np
 
 f = open('p082_matrix.txt', 'r')
