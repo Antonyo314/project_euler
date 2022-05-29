@@ -35,23 +35,4 @@ for i in range(1, len(arr)):
     for j in range(1, len(arr)):
         arr_[i][j] = arr[i][j] + min(arr_[i - 1][j], arr_[i][j - 1])
 
-n = len(arr_)
-
-i, j = n - 1, n - 1
-result = arr[i][j]
-
-while i > 0 or j > 0:
-    if i == 0:
-        j -= 1
-        result += arr[i][j]
-    elif j == 0:
-        i -= 1
-        result += arr[i][j]
-    else:
-        if arr_[i - 1][j] < arr_[i][j - 1]:
-            i -= 1
-            result += arr[i][j]
-        else:
-            j -= 1
-            result += arr[i][j]
-print(result)
+print(arr_[-1][-1])
