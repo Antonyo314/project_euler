@@ -22,7 +22,6 @@ for i in range(0, len(arr)):
     for j in range(1, len(arr)):
         arr_[i][j] = 10 ** 10
 
-
 for i in range(1, len(arr_)):
     converged = False
     while not converged:
@@ -38,28 +37,6 @@ for i in range(1, len(arr_)):
             if old_value != arr_[j][i]:
                 converged = False
 
-
 j = np.argmin([arr_[j][-1] for j in range(len(arr_))])
-i = len(arr_) - 1
-result = arr[j][i]
 
-while i > 0:
-    if j == 0:
-        if arr_[j][i - 1] < arr_[j + 1][i]:
-            i -= 1
-        else:
-            j += 1
-    elif j == len(arr_) - 1:
-        if arr_[j][i - 1] < arr_[j - 1][i]:
-            i -= 1
-        else:
-            j -= 1
-    elif arr_[j][i - 1] < arr_[j + 1][i] and arr_[j][i - 1] < arr_[j - 1][i]:
-        i -= 1
-    elif arr_[j + 1][i] < arr_[j][i - 1] and arr_[j + 1][i] < arr_[j - 1][i]:
-        j += 1
-    else:
-        j -= 1
-    result += arr[j][i]
-
-print(result)
+print(arr_[j][-1])
