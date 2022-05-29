@@ -37,6 +37,4 @@ for i in range(1, len(arr_)):
             if old_value != arr_[j][i]:
                 converged = False
 
-j = np.argmin([arr_[j][-1] for j in range(len(arr_))])
-
-print(arr_[j][-1])
+print(min([arr_[j][-1] for j in range(len(arr_))]))
