@@ -54,7 +54,7 @@ for i in range(len(arr)):
     for j in range(i + 1, len(arr)):
         if anagrams(arr[i], arr[j]):
 
-            squares = squares_of_len(len(arr[i]))
+            squares = len2squares[len(arr[i])]
 
             for square in squares:
                 square_string = str(square)
