@@ -1,5 +1,3 @@
-from tqdm import trange, tqdm
-
 s = open('p098_words.txt', 'r').read()
 arr = s.split(',')
 
