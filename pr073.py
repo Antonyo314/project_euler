@@ -11,6 +11,7 @@ def euclid(a, b):
     if b > a:
         return euclid(a, b % a)
 
+
 N = 12_000
 all_fractions_set = set()
 
