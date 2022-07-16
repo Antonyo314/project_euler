@@ -136,7 +136,7 @@ class Hand:
             return 8, self.get_highest_card()
 
 
-f = open('/Users/anton/PycharmProjects/project_euler/p054_poker.txt', 'r')
+f = open('p054_poker.txt', 'r')
 s = f.read()
 
 hands = s.split('\n')
