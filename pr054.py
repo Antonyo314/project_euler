@@ -39,7 +39,7 @@ class Hand:
     def is_flush(self):
         if len(set(self.suits)) == 1:
             highest_card = max(self.values)
-            return True, highest_card, highest_card
+            return True, highest_card, None
         else:
             return False, None
 
@@ -48,7 +48,7 @@ class Hand:
         diffs = [j - i for i, j in zip(t[:-1], t[1:])]
         if len(set(diffs)) == 1 and 1 in diffs:  # not taken into account A 2 3 4 5
             highest_card = max(self.values)
-            return True, highest_card, highest_card
+            return True, highest_card, None
         else:
             return False, None
 
